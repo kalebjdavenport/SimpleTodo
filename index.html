@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO App</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="flex p-6 flex-col items-center min-h-screen">
+      <div
+        class="w-full flex justify-around items-center text-lg text-gray-100"
+      >
+        <div>Total: <span id="item-count">0</span></div>
+        <h1 class="flex space-between text-white text-5xl">Create/ve Beast</h1>
+        <div>Unchecked: <span id="unchecked-count">0</span></div>
+      </div>
+      <div class="flex w-full mb-4 p-6">
+        <div
+          class="m-6 p-6 m-auto todo-column rounded-lg w-full border-2 border-white"
+        >
+          <div id="todo-list"></div>
+          <div id="inactive">
+            <div
+              class="todo-new cursor-pointer bg-white rounded overflow-hidden shadow-lg"
+            >
+              <div class="px-6 py-3">
+                <div class="flex font-bold text-xl text-gray-700">
+                  <div>
+                    <button
+                      class="plus bg-gray-100 px-2 mr-4 hover:bg-gray-300 rounded-lg"
+                    >
+                      <i class="fa text-purple-600 fa-plus"></i>
+                    </button>
+                  </div>
+                  New Item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="active" class="todo-new hidden bg-white rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-3">
+              <div class="flex font-bold text-xl text-gray-700">
+                <form class="w-full m-auto" onsubmit="return false">
+                  <input
+                    name="name"
+                    class="bg-white focus:outline-none border border-gray-300 rounded-lg py-1 px-2 block w-full appearance-none leading-normal"
+                    id="name"
+                    type="text"
+                    placeholder="Task Name"
+                    aria-label="Task Name"
+                  />
+                  <div
+                    class="flex items-center my-2 border-b border-b-2 border-teal-500 py-2"
+                  >
+                    <input
+                      name="description"
+                      class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                      id="description"
+                      type="text"
+                      placeholder="Description"
+                      aria-label="Description"
+                    /><button
+                      id="todoFormSubmit" 
+                      class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

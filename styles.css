@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #868f96, #596164);
+}
+
+.todo-column {
+  max-width: 50rem;
+}
+
+.todo-new:hover .plus {
+  background-color: #e2e8f0;
+}
